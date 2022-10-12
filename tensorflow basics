@@ -1,0 +1,9 @@
+import tensorflow as tf
+tensor=tf.constant([3, 4, 5])
+tensor2=tf.constant([6, 7, 8])
+tensor3=tf.zeros([2, 2, 4])
+tensor4=tf.constant([1.], tf.float64)
+
+w=tf.Variable(1.0)
+w.assign(2)
+print(w.dtype)
