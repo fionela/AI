@@ -1,0 +1,18 @@
+import tensorflow as tf
+
+def lofunction():
+    return tf.square(260-(height*a+b))
+height=170
+shoesize=260
+
+#shoe-size=height*a+b
+
+
+a=tf.Variable(0.1)
+b=tf.Variable(0.999999)
+
+opt=tf.keras.optimizers.Adam(learning_rate=0.1)
+for i in range(300):
+    opt.minimize(lofunction, var_list=[a, b])
+    print(a.numpy(), b.numpy())
+print((height*a+b).numpy())
